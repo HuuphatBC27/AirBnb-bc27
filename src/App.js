@@ -1,12 +1,17 @@
-import React from "react";
+import Home from "modules/Home/pages/Home";
+import Room from "modules/Room/pages/Room";
 
-//component
+import { Route, Routes } from "react-router-dom";
+
 function App() {
-  //JSX : JavaScript XML
   return (
-    <div className="App">
-      <h1> hello</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* dianamic URL */}
+        <Route path="/room/:roomId" element={<Room />} />
+      </Routes>
+    </>
   );
 }
 
