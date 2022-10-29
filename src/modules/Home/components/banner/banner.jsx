@@ -24,6 +24,7 @@ const Banner = () => {
       {banners?.map((banner) => {
         return (
           <img
+            key={banner.id}
             src={banner.hinhAnh}
             alt={`banner-${banner.maBanner}`}
             width="100px"

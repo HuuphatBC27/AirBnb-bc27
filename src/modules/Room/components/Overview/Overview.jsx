@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
 
-const Overview = () => {
+import useRequest from "hooks/useRequest";
+import roomAPI from "apis/roomAPI";
+const Overview = ({ roomId }) => {
+  const {
+    data: room,
+    isLoading,
+    error,
+  } = useRequest(() => roomAPI.getRoomDetails(roomId));
+  if (!room) {
+    return null;
+  }
   return (
-    <div>Overview</div>
-  )
-}
+    <div>
+      <h1>{room.tenPhong}</h1>
+      <img src={room.hinhAnh} />
+      <h2>{room.moTa}</h2>
+    </div>
+  );
+};
 
-export default Overview
+export default Overview;
