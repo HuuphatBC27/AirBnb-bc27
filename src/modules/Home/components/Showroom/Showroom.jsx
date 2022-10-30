@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+
+import CardGroup from "react-bootstrap/CardGroup";
 import useRequest from "hooks/useRequest";
 import roomAPI from "apis/roomAPI";
 
@@ -23,19 +25,23 @@ const ShowRoom = () => {
     <ul>
       {rooms?.map((room) => {
         return (
-          <div className="container align-items-center p-5">
-            {" "}
-            <Card style={{ width: "100%" }} key={room.id}>
+          <CardGroup className=" pt-5">
+            <Card>
               <Card.Img variant="top" src={room.hinhAnh} />
               <Card.Body>
-                <Card.Title>{room.tenPhong}</Card.Title>
+                <Card.Title>Card title</Card.Title>
                 <Card.Text>{room.moTa}</Card.Text>
+                <Card.Text>{room.giaTien}$ đêm</Card.Text>
                 <Button variant="primary" onClick={() => goToRoom(room.id)}>
                   chi tiết
                 </Button>
               </Card.Body>
+
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
             </Card>
-          </div>
+          </CardGroup>
         );
       })}
     </ul>
