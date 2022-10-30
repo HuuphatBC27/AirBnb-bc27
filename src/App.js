@@ -2,6 +2,7 @@ import Login from "modules/Authentication/pages/Login";
 import Register from "modules/Authentication/pages/Register";
 import Home from "modules/Home/pages/Home";
 import Room from "modules/Room/pages/Room";
+import "./main.scss";
 
 // thư viện giúp quản lí form  (giá trị và validation)
 

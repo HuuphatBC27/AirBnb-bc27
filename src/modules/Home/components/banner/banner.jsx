@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 // import { getBanners } from "../../slices/bannerSlices";
 
@@ -20,16 +20,20 @@ const Banner = () => {
   } = useRequest(() => roomAPI.getRooms());
 
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       {banners?.map((banner) => {
         return (
-          <img
-            key={banner.id}
-            src={banner.hinhAnh}
-            alt={`banner-${banner.maBanner}`}
-            width="100px"
-            height="100px"
-          />
+          <div className="  container ">
+            <div className="row ">
+              <img
+                key={banner.id}
+                src={banner.hinhAnh}
+                alt={`banner-${banner.maBanner}`}
+                width="100px  "
+                height="100px"
+              />
+            </div>
+          </div>
         );
       })}
     </div>
