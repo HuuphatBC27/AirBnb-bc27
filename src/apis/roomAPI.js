@@ -8,7 +8,7 @@ const roomAPI = {
   getRoomDetails: (roomId) => {
     return axiosClient.get(`phong-thue/${roomId}`);
   },
-  getComment: (roomId) => {
+  getCommentDetails: (roomId) => {
     return axiosClient.get(`binh-luan/lay-binh-luan-theo-phong/${roomId}`);
   },
 
