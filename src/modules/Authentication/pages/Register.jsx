@@ -4,7 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 const Register = () => {
-  useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       name: "",
       email: "",
@@ -16,7 +16,40 @@ const Register = () => {
     },
   });
 
-  return <div>Register</div>;
+  const onSubmit = (values) => {
+    console.log(values);
+  };
+
+  // const onSubmit = async (values) => {
+  //   const newValue = {...values,birthday:pickDate}
+  //   try {
+  //     await handleRegister(newValue);
+  //     navigate("/login");
+  //     notification.success({
+  //       message: "Đăng ký thành công",
+  //     });
+  //     console.log(newValue);
+  //   } catch (error) {
+  //     notification.error({
+  //       message: "Đăng ký thất bại",
+  //       description: error,
+  //     });
+  //   }
+  // };
+
+  return (
+    <div>
+      <h1>Register</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input type="text" placeholder="Account" {...register("name")} />
+        <input type="text" placeholder="Email" {...register("email")} />
+        <input type="text" placeholder="Password" {...register("password")} />
+        <input type="text" placeholder="Phone" {...register("phone")} />
+        <input type="text" placeholder="Birthday" {...register("birtday")} />
+        <button>Register</button>
+      </form>
+    </div>
+  );
 };
 
 export default Register;
