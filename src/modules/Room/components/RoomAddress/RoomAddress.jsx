@@ -15,15 +15,19 @@ const RoomAddress = ({ roomId }) => {
   return (
     <div className="container text-center">
       <div className="">
-        <Card style={{ width: "18rem" }}>
+        <Card>
           <Card.Img variant="top" src={RoomAddress.hinhAnh} />
 
           <ListGroup className="list-group-flush">
-            <ListGroup.Item>Vị trí : {RoomAddress.tenViTri}</ListGroup.Item>
             <ListGroup.Item>
-              tỉnh thành : {RoomAddress.tinhThanh}
+              <h3>Vị trí : {RoomAddress.tenViTri}</h3>
             </ListGroup.Item>
-            <ListGroup.Item>Quốc gia : {RoomAddress.quocGia}</ListGroup.Item>
+            <ListGroup.Item>
+              <h4>tỉnh thành : {RoomAddress.tinhThanh}</h4>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h5>Quốc gia : {RoomAddress.quocGia}</h5>
+            </ListGroup.Item>
           </ListGroup>
         </Card>
       </div>

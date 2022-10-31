@@ -22,31 +22,37 @@ const ShowRoom = () => {
   };
 
   return (
-    <ul>
-      {rooms?.map((room) => {
-        return (
-          <div className="container">
-            <CardGroup className=" pt-5">
-              <Card>
-                <Card.Img variant="top" src={room.hinhAnh} />
-                <Card.Body>
-                  <Card.Title>{room.tenPhong}</Card.Title>
-                  <Card.Text>{room.moTa}</Card.Text>
+    <div>
+      <h1> 1 số nơi nổi bật</h1>
+      <ul>
+        {rooms.slice(0, 3)?.map((room) => {
+          return (
+            <div className="container">
+              <CardGroup className=" pt-5">
+                <Card>
+                  <Card.Img variant="top" src={room.hinhAnh} />
+                  <Card.Body>
+                    <Card.Title>{room.tenPhong}</Card.Title>
+                    <Card.Text>{room.moTa}</Card.Text>
 
-                  <Button variant="primary" onClick={() => goToRoom(room.id)}>
-                    chi tiết
-                  </Button>
-                </Card.Body>
+                    <Button variant="primary" onClick={() => goToRoom(room.id)}>
+                      chi tiết
+                    </Button>
+                  </Card.Body>
 
-                <Card.Footer>
-                  <small className="text-muted">Last updated 3 mins ago</small>
-                </Card.Footer>
-              </Card>
-            </CardGroup>
-          </div>
-        );
-      })}
-    </ul>
+                  <Card.Footer>
+                    <small className="text-muted">
+                      Last updated 3 mins ago
+                    </small>
+                  </Card.Footer>
+                </Card>
+              </CardGroup>
+            </div>
+          );
+        })}
+      </ul>
+      <button> Xem toàn bộ </button>
+    </div>
   );
 };
 
