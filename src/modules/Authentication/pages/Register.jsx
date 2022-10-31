@@ -209,13 +209,23 @@ const Register = () => {
                           },
                         })}
                       >
-                        <option  className="jobDetail-gig text-success  " value="" selected="">
+                        <option
+                          className="jobDetail-gig text-success  "
+                          value=""
+                          selected=""
+                        >
                           Select Gender
                         </option>
-                        <option className="jobDetail-gig text-success " value="true">
+                        <option
+                          className="jobDetail-gig text-success "
+                          value="true"
+                        >
                           Male
                         </option>
-                        <option className="jobDetail-gig text-success " value="false">
+                        <option
+                          className="jobDetail-gig text-success "
+                          value="false"
+                        >
                           Female
                         </option>
                       </select>
