@@ -1,0 +1,150 @@
+body {
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: normal;
+  color: gray;
+}
+.login-box {
+  position: relative;
+  background: #000232;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0px 10px 34px -15px rgba(15, 15, 15, 0.24);
+}
+.login-box h3 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.login-img {
+  //   background-image: url("https://fiverr-res.cloudinary.com/npm-assets/layout-server/fiverr-og-logo.5fd6463.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.login-col {
+  width: 400px;
+}
+.login-box .login-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.login-wrapper {
+  padding: 40px 40px;
+  background: #fbd1b7;
+  height: 880px;
+}
+.login-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+// Overwrite library
+.ant-row {
+  display: block;
+}
+.ant-col-8 {
+  max-width: 100%;
+}
+.ant-col-14 {
+  display: none;
+}
+
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.ant-form-item-label > label {
+  @include txtStyle($color-w, $fs-2, $fw-1);
+}
+
+.ant-btn-primary {
+  color: #000232;
+}
+
+.login-wrapper .ant-btn-primary {
+  width: 100%;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  height: 48px;
+  border: 1px solid #b689b0;
+  border-radius: 8px;
+  background: #b689b0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  letter-spacing: 2px;
+}
+
+.login-wrapper .ant-btn-primary:hover {
+  background-color: #000232;
+}
+.ant-form-item-control {
+  margin: 0;
+}
+.ant-input {
+  height: 36px;
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid #b689b0;
+  padding-left: 4px;
+  padding-right: 0;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.ant-input:hover {
+  border-color: #d3d3d3;
+  box-shadow: transparent;
+}
+.ant-input:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #d3d3d3;
+}
+.form-selected {
+  padding: 6px 12px;
+  width: 100%;
+  border: 1px solid #ced4da;
+}
+.ant-form-item-label {
+  text-align: start;
+}
+.ant-picker-suffix {
+  color: rgb(0, 255, 55);
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input {
+  background: transparent;
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+  background: transparent;
+}
