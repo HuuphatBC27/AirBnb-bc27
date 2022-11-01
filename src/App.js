@@ -25,10 +25,10 @@ function App() {
       }
     >
       <Routes>
-        <Route path="/" element={<MainLayout />} />
-        <Route index element={<Home />} />
-        <Route path="/room/:roomId" element={<Room />} />
-
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/room/:roomId" element={<Room />} />
+        </Route>
         <Route path="/" element={<Auth />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

@@ -1,0 +1,137 @@
+/* Header */
+
+.header-config-text {
+    @include txtStyle($color-0, $fs-2, $fw-1);
+    &:hover {
+      color: $bg-1;
+    }
+    @include trans;
+  }
+  
+  .header-search-btn {
+    @include btnStyle($bg-2, $pd-1, $pd-3, $color-w);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    &:hover {
+      opacity: 0.8;
+    }
+    @include trans;
+  }
+  
+  .header-nav-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .header-submenu {
+    z-index: 1001;
+    background: #fafafa;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  right: 0;
+    top: 40px;
+    width: 200px;
+    display: none;
+    
+    
+  }
+  .header-submenu-item{
+    @include txtStyle($color-t,$fs-2,$fw-0);
+    &:hover{
+      @include txtHover($bg-1)
+    }
+  }
+  .header-nav-submenu::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 4px;
+    top: 20px;
+    border-top: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #f7f5f5;
+    border-left: 16px solid transparent;
+  }
+  // .hd-show-submenu:hover::after {
+  //   display: block;
+  // }
+  // .hd-show-submenu:hover .hd-submenu {
+  //   display: block;
+  // }
+  .nav-btn {
+    border: 1px solid $bg-0;
+    padding: 6px 16px;
+    background: transparent;
+    border-radius: 4px;
+    @include txtStyle($color-w, $fs-2, $fw-2);
+    &:hover {
+      color: $color-w;
+      background: $bg-1;
+    }
+    @include trans;
+  }
+  .header-nav-btn {
+    border: 1px solid $bg-1;
+    padding: 6px 16px;
+    background: transparent;
+    border-radius: 4px;
+    @include txtStyle($bg-1, $fs-2, $fw-2);
+    &:hover {
+      background: $bg-1;
+      color: $color-w;
+    }
+    @include trans;
+  }
+  
+  .header-nav-fixed {
+    color: $color-t;
+    background: $color-w;
+      position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 1000;
+    @include trans;
+  }
+  
+  .subtypeJob-sub-title{
+    @include txtStyle($color-t, $fs-2, $fw-0);
+  
+    z-index: 1000;
+  }
+  .subtypeJob-sub-title::before {
+    content: "";
+    width: 120px;
+    height: 12px;
+    background: transparent;
+    position: absolute;
+    top: 130px;
+  }
+  .subtypeJob-sub-title:hover {
+    @include txtHover($bg-1);
+  }
+  .subtypeJob-sub-title:hover .subtypeJob {
+    display: block;
+  }
+  .subtypeJob {
+    display: none;
+    top: 140px;
+    background: $color-w;
+    border-radius: 4px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    &:hover {
+      cursor: default;
+    }
+  }
+  .subtypeJob-title {
+    @include txtStyle($color-b, $fs-5, $fw-1);
+  }
+  .subtypeJob-sub {
+    @include txtStyle($color-ft, $fs-2, $fw-0);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  
+  
+  

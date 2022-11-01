@@ -2,9 +2,9 @@ import Slider from "../components/Slider";
 import Trusted from "../Trusted";
 import Showroom from "../components/Showroom/";
 import SliderSearch from "../components/SliderSearch";
-import Explore from "../Explore/Explore";
+import Explore from "../components/Explore/Explore";
 import Services from "../components/services";
-import Contact from "../components/Contact";
+
 const home = () => {
   return (
     <div>
@@ -14,7 +14,6 @@ const home = () => {
       <Showroom />
       <Services />
       <Explore />
-      {/* <Contact /> */}
     </div>
   );
 };
