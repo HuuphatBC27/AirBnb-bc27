@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { notification } from "antd";
 import { DatePicker, Space } from "antd";
 import useRequest from "hooks/useRequest";
-import authAPI from "apis/authAPI";
+import authAPI from "apis/AuthAPI";
 // để đăng kí dữ liệu cần các key giống trên sever Data : id, name, email ,password,phone, birthday , gender, role
 
 const Register = () => {
