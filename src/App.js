@@ -11,6 +11,9 @@ import "./main.scss";
 
 import { Route, Routes } from "react-router-dom";
 const Auth = lazy(() => import("./components/Auth/Auth"));
+const UserAdmin = lazy(() => import("./modules/UserAdmin/UserAdmin.jsx"));
+const EditUser = lazy(() => import("modules/UserAdmin/pages/EditUser"));
+const AddUser = lazy(() => import("modules/UserAdmin/pages/AddUser"));
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Route>
+        <Route path="/user" element={<UserAdmin />} />
+        <Route path="user/edit/:id" element={<EditUser />} />
+        <Route path="user/add" element={<AddUser />} />
       </Routes>
     </Suspense>
   );
