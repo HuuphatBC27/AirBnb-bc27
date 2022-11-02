@@ -38,8 +38,6 @@ const Header = () => {
     navigate(`/${path}`);
   };
 
-  const { data: typeJob } = useRequest(() => roomAPI.getTypeJob());
-
   const handleLogout = () => {
     setisLogout(!isLogout);
     dispatch(logout());
@@ -54,20 +52,17 @@ const Header = () => {
   return (
     <div className="header-nav-fixed">
       <div className="m-container">
-        <div
-          className="d-flex justify-content-between align-items-center"
-          style={{ height: "80px" }}
-        >
+        <div className="d-flex justify-content-between align-items-center">
           <h3>© Airbnb</h3>
           <div
-            className="header-search header-nav-input col-4"
+            className="header-search header-nav-input col-6 ps-3"
             style={{ display: "block" }}
           >
             <form className="d-flex">
               <input
                 type="text"
                 className="form-control"
-                placeholder="What service are you looking for today ?"
+                placeholder="Hôm nay bạn muốn đi đâu ?"
                 onChange={(e) => setValue(e.target.value)}
               />
               <button
@@ -75,7 +70,7 @@ const Header = () => {
                 type="submit"
                 className="header-search-btn"
               >
-                <BiSearch color="white" size="16px" />
+                <BiSearch color="white" size="26px" />
               </button>
             </form>
           </div>
@@ -86,25 +81,25 @@ const Header = () => {
             >
               <li>
                 <a
-                  className="header-nav-seller header-config-text px-3"
+                  className="header-nav-seller header-config-text px-3 "
                   href="true"
                 >
-                  Become a Seller
+                  trở thành chủ nhà
                 </a>{" "}
               </li>
               <li>
                 <button
                   onClick={() => movePath("register")}
-                  className="header-config-text px-3"
+                  className="header-config-text px-3 btn btn-dark"
                   href="true"
                 >
-                  Sign in
+                  Register
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => movePath("login")}
-                  className="header-nav-btn"
+                  className="header-nav-btn btn btn-light"
                 >
                   Join
                 </button>
@@ -155,7 +150,7 @@ const Header = () => {
                   </ul>
                   <ul className="py-1 border-bottom">
                     <li className="py-2 header-submenu-item">
-                      Become a seller
+                      trở thành chủ nhà
                     </li>
                     <li
                       onClick={() => moveSetttings(user)}
@@ -183,45 +178,6 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <ul
-          style={{ display: "flex" }}
-          className="m-auto justify-content-between header-submenu-scroll border-top border-bottom"
-        >
-          {typeJob?.map((type) => {
-            return (
-              <li className="subtypeJob-sub-title p-3" key={type.id}>
-                <button
-                  className="subtype-sub-btnHeight"
-                  onClick={() => movePath(`typejob/${type.id}`)}
-                >
-                  {type.tenLoaiCongViec}
-                </button>
-                <div className="subtypeJob position-absolute p-4 pb-0">
-                  {type.dsNhomChiTietLoai.map((subtypeJob) => (
-                    <div
-                      className="d-flex flex-column subtypeJob-title "
-                      key={subtypeJob.tenNhom}
-                    >
-                      <p className=" pb-3">{subtypeJob?.tenNhom}</p>
-                      <div className="d-flex flex-column subtypeJob-sub pb-4">
-                        {subtypeJob.dsChiTietLoai.map((listSubtypeJob) => (
-                          <button
-                            onClick={() =>
-                              handleSearchJob(listSubtypeJob.tenChiTiet)
-                            }
-                            className="pb-2 text-start"
-                          >
-                            {listSubtypeJob.tenChiTiet}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </div>
   );

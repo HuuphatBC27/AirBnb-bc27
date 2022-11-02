@@ -21,20 +21,13 @@ const ShowRoom = () => {
     navigate(`/room/${roomId}`);
   };
 
-  const TRAILERS = [
-    "https://www.youtube.com/watch?v=BPMkBxvjfJ8",
+  const movePath = (path) => {
+    navigate(`/${path}`);
+  };
 
-    "https://www.youtube.com/watch?v=9I2xta0ahIs",
-    "https://www.youtube.com/watch?v=FOCp9rMMcZU",
-  ];
-
-  const roomsMapped = rooms?.map((room, index) => {
-    return { ...rooms, trailer: TRAILERS[index] };
-  });
-  console.log(roomsMapped);
   return (
     <div>
-      <h1> Một số nơi nổi bật</h1>
+      <h1 className=" text-center"> Một số nơi nổi bật</h1>
       <ul>
         {rooms?.slice(0, 3).map((room) => {
           return (
@@ -62,7 +55,16 @@ const ShowRoom = () => {
           );
         })}
       </ul>
-      <button> Xem toàn bộ </button>
+      <div className="text-center">
+        {" "}
+        <button
+          onClick={() => movePath("ShowDetails")}
+          className="header-config-text px-3 btn btn-dark "
+          href="true"
+        >
+          Xem toàn bộ
+        </button>
+      </div>
     </div>
   );
 };

@@ -5,11 +5,13 @@ import Login from "modules/Authentication/pages/Login";
 import Register from "modules/Authentication/pages/Register";
 import Home from "modules/Home/pages/Home";
 import Room from "modules/Room/pages/Room";
+import ShowDetails from "modules/Home/ShowDetails";
 import "./main.scss";
 
 // thư viện giúp quản lí form  (giá trị và validation)
 
 import { Route, Routes } from "react-router-dom";
+
 const Auth = lazy(() => import("./components/Auth/Auth"));
 const UserAdmin = lazy(() => import("./modules/UserAdmin/UserAdmin.jsx"));
 const EditUser = lazy(() => import("modules/UserAdmin/pages/EditUser"));
@@ -27,8 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="/room/:roomId" element={<Room />} />
         </Route>
+        <Route path="/room/:roomId" element={<Room />} />
+        <Route path="/Showdetails" element={<ShowDetails />} />
         <Route path="/" element={<Auth />}>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

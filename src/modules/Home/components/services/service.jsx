@@ -6,9 +6,7 @@ const Proposition = () => {
       <div className="m-container my-xl-5 my-0">
         <div className="d-flex align-items-center proposition">
           <div className="col-xl-6 col-12 proposition-right">
-            <h1 className="category-heading pb-4">
-              Popular Professional Services
-            </h1>
+            <h1 className="category-heading pb-4 text-center">Các dịch vụ nổi tiếng</h1>
             <div className="d-flex proposition-title align-items-center pb-2">
               <span className="pe-2">
                 <BsCheckCircle />
@@ -48,11 +46,11 @@ const Proposition = () => {
               <span className="pe-2">
                 <BsCheckCircle />
               </span>{" "}
-              24/7 support
+              dịch vụ phòng 24/24
             </div>
             <p className="proposition-content pb-4">
-              Questions? Our round-the-clock support team is available to help
-              anytime, anywhere.
+              Đây là dịch vụ mà du khách có thể sử dụng để được phục vụ thức ăn,
+              đồ uống.. tại phòng 24/24.
             </p>
           </div>
           <div className="col-xl-6 col-12">
