@@ -11,7 +11,7 @@ const SliderSearch = () => {
     if (!value) {
       return;
     }
-    navigate(`categories/${value}`);
+    navigate("ShowDetails");
   };
 
   return (
