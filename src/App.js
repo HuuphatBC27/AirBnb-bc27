@@ -32,10 +32,12 @@ function App() {
         </Route>
         <Route path="/room/:roomId" element={<Room />} />
         <Route path="/Showdetails" element={<ShowDetails />} />
+
         <Route path="/" element={<Auth />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register />} />/
         </Route>
+
         <Route path="/user" element={<UserAdmin />} />
         <Route path="user/edit/:id" element={<EditUser />} />
         <Route path="user/add" element={<AddUser />} />

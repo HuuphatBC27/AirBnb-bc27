@@ -73,7 +73,9 @@ body {
 .ant-btn-primary {
   color: #000232;
 }
-
+.ant-picker-input > input {
+  color: #fff !important;
+}
 .login-wrapper .ant-btn-primary {
   width: 100%;
   margin: auto;

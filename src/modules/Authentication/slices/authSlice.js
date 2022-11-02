@@ -1,15 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import authAPI from "apis/AuthAPI";
+import AuthAPI from "../../../apis/AuthAPI";
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")) || null,
   isLoading: false,
   error: null,
 };
+
 export const login = createAsyncThunk(
   "authentication/auth/login",
   async (values, { rejectWithValue }) => {
     try {
-      const data = await authAPI.login(values);
+      const data = await AuthAPI.login(values);
       localStorage.setItem("user", JSON.stringify(data));
       return data;
     } catch (error) {
@@ -17,6 +18,7 @@ export const login = createAsyncThunk(
     }
   }
 );
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -32,6 +34,7 @@ const authSlice = createSlice({
     });
   },
 });
+
 export const { logout } = authSlice.actions;
 
 export default authSlice.reducer;

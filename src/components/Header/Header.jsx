@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import useRequest from "../../hooks/useRequest";
 import { NavLink } from "react-router-dom";
 import { logout } from "../../modules/Authentication/slices/authSlice";
-import roomAPI from "../../apis/roomAPI";
+
 import {
   MdOutlineNotifications,
   MdMailOutline,
@@ -57,23 +57,7 @@ const Header = () => {
           <div
             className="header-search header-nav-input col-6 ps-3"
             style={{ display: "block" }}
-          >
-            <form className="d-flex">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Hôm nay bạn muốn đi đâu ?"
-                onChange={(e) => setValue(e.target.value)}
-              />
-              <button
-                onClick={() => handleSearchJob(value)}
-                type="submit"
-                className="header-search-btn"
-              >
-                <BiSearch color="white" size="26px" />
-              </button>
-            </form>
-          </div>
+          ></div>
           <nav className="header-nav-auth flex-grow-1">
             <ul
               style={{ display: user === "" ? "flex" : "none" }}

@@ -1,17 +1,11 @@
 import React from "react";
-import {
-  BsTwitter,
-  BsLinkedin,
-  BsFacebook,
-  BsInstagram,
-  BsYoutube,
-} from "react-icons/bs";
+
 import {
   AiOutlineGlobal,
   AiOutlineDollarCircle,
   AiFillCodepenCircle,
 } from "react-icons/ai";
-import DisabledContext from "antd/lib/config-provider/DisabledContext";
+
 const Footer = () => {
   return (
     <div className="pt-0 pt-xl-5">

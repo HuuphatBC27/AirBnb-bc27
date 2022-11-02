@@ -1,11 +1,11 @@
-// import React from "react";
 import { Button, Form, Input, notification } from "antd";
+// import authAPI from "apis/authAPI";
+// import useRequest from "hooks/useRequest";
 import { useForm, Controller } from "react-hook-form";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
 import { login } from "../slices/authSlice";
-
+import { NavLink } from "react-router-dom";
 const Login = () => {
   const { handleSubmit, control } = useForm({
     defaultValues: {
@@ -14,23 +14,25 @@ const Login = () => {
     },
     mode: "onTouched",
   });
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user, isLoading } = useSelector((state) => state.auth);
-  const onSubmit = async (values) => {
-    try {
-      await dispatch(login(values)).unwrap();
-      navigate("/");
-      notification.success({
-        message: "Đăng nhập thành công!",
-      });
-    } catch (error) {
-      notification.error({
-        message: "Đăng nhập thất bại!",
-        description: error,
-      });
-    }
-  };
+
+  // const onSubmit = async (values) => {
+  //   try {
+  //     await dispatch(login(values)).unwrap();
+  //     navigate("/");
+  //     notification.success({
+  //       message: "Đăng nhập thành công!",
+  //     });
+  //   } catch (error) {
+  //     notification.error({
+  //       message: "Đăng nhập thất bại!",
+  //       description: error,
+  //     });
+  //   }
+  // };
 
   return (
     <div className="login-wrapper">
@@ -48,7 +50,7 @@ const Login = () => {
               </p>
               <Form
                 className="rounded-2"
-                onFinish={handleSubmit(onSubmit)}
+                // onFinish={handleSubmit(onSubmit)}
                 labelCol={{ span: 8 }}
                 wrapperCol={{ span: 8 }}
               >
